@@ -1,0 +1,131 @@
+<div class="container mt-5">
+    <!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+        {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+      </button> -->
+    <mat-horizontal-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+            <!-- <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Fill out your name</ng-template>
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form> -->
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Please enter the details of your fixed facility /Tank, please complete the field with asterisk
+                        </mat-panel-title>
+                        <!-- <mat-panel-description>
+                            Type your name and age
+                        </mat-panel-description> -->
+                    </mat-expansion-panel-header>
+                    <div class="row">
+                        <div class="col-7">
+                            <mat-form-field class="mr-5">
+                                <input matInput placeholder="Facility / Task name" required>
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <input matInput placeholder="Commission Date">
+                            </mat-form-field>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="form-goup">
+                                        <label for="exampleFormControlInput1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <label for="checkboxes">Select compartment</label>
+
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                          <input type="radio" class="form-check-input" name="optradio">Option 1
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                          <input type="radio" class="form-check-input" name="optradio">Option 1
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <label for="checkboxes">Select Address</label>
+
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                          <input type="radio" class="form-check-input" name="optradio">Option 1
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                          <input type="radio" class="form-check-input" name="optradio">Option 1
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <label class="form-check-label">
+                                    <input type="file" name="" id="">
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <label for="textarea" class=""><strong>Assets Description</strong></label>
+                            <textarea cols="60" rows="6"></textarea>
+                        </div>
+                    </div>
+
+                </mat-expansion-panel>
+
+
+
+            </mat-accordion>
+
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Fill out your address</ng-template>
+                <mat-form-field>
+                    <mat-label>Address</mat-label>
+                    <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+
+        <mat-step>
+            <ng-template matStepLabel>Fill company name</ng-template>
+            <p>You are now done.</p>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </mat-step>
+
+    </mat-horizontal-stepper>
+</div>
