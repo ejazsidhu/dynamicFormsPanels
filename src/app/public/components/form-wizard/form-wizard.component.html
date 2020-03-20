@@ -4,16 +4,16 @@
       </button> -->
     <mat-horizontal-stepper [linear]="isLinear" #stepper>
         <mat-step [stepControl]="firstFormGroup">
-            <!-- <form [formGroup]="firstFormGroup">
-                <ng-template matStepLabel>Fill out your name</ng-template>
-                <mat-form-field>
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Fixed Assets</ng-template>
+                <!-- <mat-form-field>
                     <mat-label>Name</mat-label>
                     <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
                 </mat-form-field>
                 <div>
                     <button mat-button matStepperNext>Next</button>
-                </div>
-            </form> -->
+                </div> -->
+            </form>
             <mat-accordion>
                 <mat-expansion-panel>
                     <mat-expansion-panel-header>
@@ -34,9 +34,9 @@
                                 <input matInput placeholder="Commission Date">
                             </mat-form-field>
 
-                            <div class="row">
+                            <div class="row mt-3">
                                 <div class="col-4">
-                                    <div class="form-goup">
+                                    <div class="form-group">
                                         <label for="exampleFormControlInput1">Email address</label>
                                         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                                     </div>
@@ -149,12 +149,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12 text-right">
-                            <button mat-button mat-raised-button matStepperPrevious class="mr-2">Back</button>
-                            <button mat-button mat-raised-button matStepperNext color="primary">Next</button>
-                        </div>
-                    </div>
+
                 </mat-expansion-panel>
 
                 <mat-expansion-panel>
@@ -325,12 +320,68 @@
                         </div>
                     </div>
                 </mat-expansion-panel>
-            </mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Please set the device /facility tracking parameters and alarm information below to activate
 
+                        </mat-panel-title>
+                        <!-- <mat-panel-description>
+                                      Type your name and age
+                                  </mat-panel-description> -->
+                    </mat-expansion-panel-header>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="staticEmail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="staticEmail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="staticEmail">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+            <div class="row">
+                <div class="col-12 text-right mt-4">
+                    <button mat-button mat-raised-button matStepperPrevious class="mr-2">Back</button>
+                    <button mat-button mat-raised-button matStepperNext color="primary">Next</button>
+                </div>
+            </div>
         </mat-step>
         <mat-step [stepControl]="secondFormGroup">
             <form [formGroup]="secondFormGroup">
-                <ng-template matStepLabel>Fill out your address</ng-template>
+                <ng-template matStepLabel>Sensor & Device Record</ng-template>
                 <mat-form-field>
                     <mat-label>Address</mat-label>
                     <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
@@ -343,7 +394,7 @@
         </mat-step>
 
         <mat-step>
-            <ng-template matStepLabel>Fill company name</ng-template>
+            <ng-template matStepLabel>done</ng-template>
             <p>You are now done.</p>
             <div>
                 <button mat-button matStepperPrevious>Back</button>
