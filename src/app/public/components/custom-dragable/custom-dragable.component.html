@@ -1,0 +1,10 @@
+<div class="container mt-5">
+    <div class="row h400">
+        <div class="col-5 border">
+            <span id='draggableSpan' (ondragstart)='onDragStart($event);' draggable='true'>
+                draggable
+              </span>
+        </div>
+        <div class="col-5 border" (ondragover)='onDragOver($event);' (ondrop)='onDrop($event);'></div>
+    </div>
+</div>

@@ -13,10 +13,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSelectModule} from '@angular/material/select';
+import { DynamicFormBuilderComponent } from './public/components/dynamic-form-builder/dynamic-form-builder.component';
+import { NgDragDropModule } from 'ng-drag-drop';
+import { CustomDraggableComponent } from './public/components/custom-dragable/custom-dragable.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FormWizardComponent
+    FormWizardComponent,
+    DynamicFormBuilderComponent,
+    CustomDraggableComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatExpansionModule,
     MatSelectModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgDragDropModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
